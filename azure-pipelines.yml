@@ -10,7 +10,7 @@ pool:
   # vmImage: ubuntu-latest
   name: test01
   demands:
-    - agent.name -equals 'Lab03 Docker Agent - Linux'
+  - Agent.Name -equals 'Lab03 Docker Agent - Linux'
 
 parameters:
   - name: myParameter
