@@ -7,14 +7,17 @@ trigger:
 - main
 
 pool:
-  vmImage: ubuntu-latest
+  # vmImage: ubuntu-latest
+  name: test01
+  demands:
+    - agent.name -equals 'Lab03 Docker Agent - Linux'
 
 parameters:
   - name: myParameter
     displayName: Description of myParameter
     default: defaultMyParameter
     type: string
-    
+
 steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
